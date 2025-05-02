@@ -1,0 +1,8 @@
+.spacer{
+  flex: auto;
+}
+.custom-toolbar {
+  background-color: #e0e0e0; /* gris clair */
+  color: black;
+}
+
