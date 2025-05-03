@@ -1,0 +1,12 @@
+Spring Boot OpenAPI UI est un outil très utile pour
+générer automatiquement la documentation de votre
+API RESTful en utilisant OpenAPI et Swagger UI.
+Cela améliore la productivité des développeurs
+en fournissant une documentation interactive
+et testable sans effort supplémentaire.
+Grâce à la bibliothèque springdoc-openapi,
+l'intégration avec Spring Boot est simple
+et directe, ce qui vous permet de gagner
+du temps dans la création et la gestion de votre
+documentation API.
+localhost:8787/swagger-ui/index.html
