@@ -25,17 +25,18 @@ public class StudentsAppSpringBackEndApplication {
     CommandLineRunner commendLineRunner(StudentRepository studentRepository,
                                         PaymentRepository paymentRepository){
         return args -> {
-            studentRepository.save(Student.builder().id(UUID.randomUUID().toString()).code("112233").firstName("Mohammed").build());
-            studentRepository.save(Student.builder().id(UUID.randomUUID().toString()).code("112244").firstName("Imane").build());
-            studentRepository.save(Student.builder().id(UUID.randomUUID().toString()).code("112255").firstName("Manal").build());
+            studentRepository.save(Student.builder().id(UUID.randomUUID().toString()).code("112233").firstName("Mohammed").programId("GLSID").build());
+            studentRepository.save(Student.builder().id(UUID.randomUUID().toString()).code("112244").firstName("Imane").programId("BDCC").build());
+            studentRepository.save(Student.builder().id(UUID.randomUUID().toString()).code("112255").firstName("Manal").programId("SDIA").build());
 
             PaymentType[] paymentTypes = PaymentType.values();
             Random random = new Random();
+
             studentRepository.findAll().forEach(st->{
                 for(int i =0;i<10;i++){
                     int index = random.nextInt(paymentTypes.length);
                     Payment payment = Payment.builder()
-                            .amount((100+(int)(Math.random()*10000)))
+                            .amount((1000+(int)(Math.random()+20000)))
                             .date(LocalDate.now())
                             .status(PaymentStatus.CREATED)
                             .type(paymentTypes[index])

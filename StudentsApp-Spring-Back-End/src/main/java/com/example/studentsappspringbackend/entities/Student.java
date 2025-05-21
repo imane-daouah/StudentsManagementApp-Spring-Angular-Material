@@ -18,6 +18,7 @@ public class Student {
     private String code ;
     private String firstName ;
     private String lastName ;
-    private String email ;
+    //private String email ;
+    private String programId ;
     private  String photo ;
 }
