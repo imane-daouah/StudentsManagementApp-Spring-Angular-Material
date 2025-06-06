@@ -20,6 +20,9 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/api/pay")
+
 public class PaymentRestController {
     @Autowired
     private PaymentService paymentService;
@@ -46,7 +49,7 @@ public class PaymentRestController {
         return paymentRepository.findByType(type);
     }
 
-    @GetMapping("/payments")
+    @GetMapping("/All/payments")
     public List<Payment> allPayments(){
         return paymentRepository.findAll();
     }
